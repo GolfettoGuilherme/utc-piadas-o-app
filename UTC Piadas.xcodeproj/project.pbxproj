@@ -14,6 +14,9 @@
 		0E30FB8F2637918C00307F5F /* UTC_Piadas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E30FB8D2637918C00307F5F /* UTC_Piadas.xcdatamodeld */; };
 		0E30FB912637918F00307F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E30FB902637918F00307F5F /* Assets.xcassets */; };
 		0E30FB942637918F00307F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E30FB922637918F00307F5F /* LaunchScreen.storyboard */; };
+		0E30FBA02637963E00307F5F /* Piada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30FB9F2637963E00307F5F /* Piada.swift */; };
+		0E30FBA4263798F200307F5F /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30FBA3263798F200307F5F /* CadastroController.swift */; };
+		0E30FBA82637996800307F5F /* DisputaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30FBA72637996800307F5F /* DisputaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		0E30FB902637918F00307F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E30FB932637918F00307F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E30FB952637918F00307F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E30FB9F2637963E00307F5F /* Piada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piada.swift; sourceTree = "<group>"; };
+		0E30FBA3263798F200307F5F /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
+		0E30FBA72637996800307F5F /* DisputaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisputaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,43 @@
 		0E30FB832637918C00307F5F /* UTC Piadas */ = {
 			isa = PBXGroup;
 			children = (
+				0E30FB9E263795FD00307F5F /* Controllers */,
+				0E30FB9D263795F900307F5F /* Views */,
+				0E30FB9C263795F300307F5F /* Models */,
 				0E30FB842637918C00307F5F /* AppDelegate.swift */,
 				0E30FB862637918C00307F5F /* SceneDelegate.swift */,
-				0E30FB882637918C00307F5F /* ViewController.swift */,
-				0E30FB8A2637918C00307F5F /* Main.storyboard */,
 				0E30FB902637918F00307F5F /* Assets.xcassets */,
 				0E30FB922637918F00307F5F /* LaunchScreen.storyboard */,
 				0E30FB952637918F00307F5F /* Info.plist */,
 				0E30FB8D2637918C00307F5F /* UTC_Piadas.xcdatamodeld */,
 			);
 			path = "UTC Piadas";
+			sourceTree = "<group>";
+		};
+		0E30FB9C263795F300307F5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E30FB9F2637963E00307F5F /* Piada.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E30FB9D263795F900307F5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E30FB8A2637918C00307F5F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0E30FB9E263795FD00307F5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E30FB882637918C00307F5F /* ViewController.swift */,
+				0E30FBA3263798F200307F5F /* CadastroController.swift */,
+				0E30FBA72637996800307F5F /* DisputaController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +175,11 @@
 			files = (
 				0E30FB8F2637918C00307F5F /* UTC_Piadas.xcdatamodeld in Sources */,
 				0E30FB892637918C00307F5F /* ViewController.swift in Sources */,
+				0E30FBA4263798F200307F5F /* CadastroController.swift in Sources */,
 				0E30FB852637918C00307F5F /* AppDelegate.swift in Sources */,
+				0E30FBA82637996800307F5F /* DisputaController.swift in Sources */,
 				0E30FB872637918C00307F5F /* SceneDelegate.swift in Sources */,
+				0E30FBA02637963E00307F5F /* Piada.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

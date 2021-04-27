@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Piada {
+    let Pergunta: String
+    let Resposta: String
+}

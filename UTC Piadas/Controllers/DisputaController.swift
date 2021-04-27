@@ -7,6 +7,9 @@
 
 import UIKit
 
-class DisputaController: ViewController {
-
+class DisputaController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Disputa"
+    }
 }
