@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4DX-o7-WMi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4DX-o7-WMi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,12 +160,78 @@
                     <view key="view" contentMode="scaleToFill" id="M3B-tO-gSv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carregando..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzg-aP-6Qj" userLabel="lblPergunta">
+                                <rect key="frame" x="20" y="160" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="9Wu-v2-spk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFl-yE-k56">
+                                <rect key="frame" x="100" y="430" width="214" height="60"/>
+                                <color key="backgroundColor" red="0.98160606620000002" green="0.8126910329" blue="0.33395379780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cKD-hh-8k3"/>
+                                </constraints>
+                                <state key="normal" title="Revelar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRelevarClick:" destination="Qhm-FB-p8L" eventType="touchUpInside" id="asu-gk-rj4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itm-WR-2iI">
+                                <rect key="frame" x="20" y="510" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ws6-Ss-iGj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48c-oQ-GYH">
+                                <rect key="frame" x="100" y="630" width="214" height="60"/>
+                                <color key="backgroundColor" red="0.2142271996" green="0.6914277673" blue="0.40578258039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qgb-cO-oDg"/>
+                                </constraints>
+                                <state key="normal" title="Próxima">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnProximoClick:" destination="Qhm-FB-p8L" eventType="touchUpInside" id="oNU-e6-Zrw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ebl-1e-bDn"/>
                         <color key="backgroundColor" red="0.1215686275" green="0.1291662455" blue="0.1868076622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ebl-1e-bDn" firstAttribute="trailing" secondItem="Itm-WR-2iI" secondAttribute="trailing" constant="20" id="0jG-7g-LHP"/>
+                            <constraint firstItem="Fzg-aP-6Qj" firstAttribute="top" secondItem="ebl-1e-bDn" secondAttribute="top" constant="20" id="89i-W4-HGq"/>
+                            <constraint firstItem="pFl-yE-k56" firstAttribute="top" secondItem="Fzg-aP-6Qj" secondAttribute="bottom" constant="20" id="8tq-Sa-nLn"/>
+                            <constraint firstItem="pFl-yE-k56" firstAttribute="leading" secondItem="ebl-1e-bDn" secondAttribute="leading" constant="100" id="BdI-1z-8OY"/>
+                            <constraint firstItem="48c-oQ-GYH" firstAttribute="leading" secondItem="ebl-1e-bDn" secondAttribute="leading" constant="100" id="FDO-KE-QYh"/>
+                            <constraint firstItem="ebl-1e-bDn" firstAttribute="trailing" secondItem="pFl-yE-k56" secondAttribute="trailing" constant="100" id="eY8-Dn-AGw"/>
+                            <constraint firstItem="Itm-WR-2iI" firstAttribute="leading" secondItem="ebl-1e-bDn" secondAttribute="leading" constant="20" id="ig3-px-xh2"/>
+                            <constraint firstItem="48c-oQ-GYH" firstAttribute="top" secondItem="Itm-WR-2iI" secondAttribute="bottom" constant="20" id="l4A-Kq-9Lf"/>
+                            <constraint firstItem="Fzg-aP-6Qj" firstAttribute="leading" secondItem="ebl-1e-bDn" secondAttribute="leading" constant="20" id="lmq-fD-YlP"/>
+                            <constraint firstItem="ebl-1e-bDn" firstAttribute="trailing" secondItem="Fzg-aP-6Qj" secondAttribute="trailing" constant="20" id="qeV-s8-IiN"/>
+                            <constraint firstItem="ebl-1e-bDn" firstAttribute="trailing" secondItem="48c-oQ-GYH" secondAttribute="trailing" constant="100" id="sYt-nW-cit"/>
+                            <constraint firstItem="Itm-WR-2iI" firstAttribute="top" secondItem="pFl-yE-k56" secondAttribute="bottom" constant="20" id="tc2-sC-O6T"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="804-Ru-UXi">
                         <barButtonItem key="backBarButtonItem" title=" " id="Vtj-6I-oYU"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnProximo" destination="48c-oQ-GYH" id="GaU-TT-cyB"/>
+                        <outlet property="btnRevelar" destination="pFl-yE-k56" id="gqe-de-Pg4"/>
+                        <outlet property="txtPergunta" destination="Fzg-aP-6Qj" id="5sd-HZ-6kT"/>
+                        <outlet property="txtResposta" destination="Itm-WR-2iI" id="cUU-g0-Jzc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrX-OB-PZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

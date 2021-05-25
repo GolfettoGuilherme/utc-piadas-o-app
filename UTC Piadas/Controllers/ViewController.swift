@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnDisputa: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "UTC"
+        title = "UTC - Não Pode Rir"
         
         btnCadastro.layer.cornerRadius = 15.0
         btnCadastro.layer.borderWidth = 2.0

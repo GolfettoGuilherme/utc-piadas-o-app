@@ -6,25 +6,36 @@
 //
 
 import UIKit
+import Firebase
 
 class CadastroController: UIViewController {
+    
     @IBOutlet weak var txtPergunta: UITextField!
     @IBOutlet weak var txtResposta: UITextField!
     @IBOutlet weak var btnCadastrar: UIButton!
+    
+    var db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Add trocadilho"
         
         btnCadastrar.layer.cornerRadius = 5
         btnCadastrar.clipsToBounds = true
+        
+        
     }
     
     @IBAction func btnCadastrarClick(_ sender: UIButton) {
         if let pergunta = txtPergunta.text, let resposta = txtResposta.text {
             
             if !pergunta.isEmpty || !resposta.isEmpty{
-                _ = Piada(Pergunta: pergunta, Resposta: resposta)
                 
+                db.collection("piadas").addDocument(data: [
+                    "pergunta":pergunta,
+                    "resposta": resposta,
+                    "date": Date().timeIntervalSince1970
+                ])
                 
                 //salvar no Firebase como nova piada
                 navigationController?.popToRootViewController(animated: true)
